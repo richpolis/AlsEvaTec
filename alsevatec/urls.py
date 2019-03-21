@@ -18,6 +18,7 @@ from django.contrib import admin
 from rest_framework import routers
 
 from albums.viewsets import AlbumViewSet, ArtistGroupViewSet
+from services.views import random_text, service_soap
 from .viewsets import UserViewSet
 
 router = routers.DefaultRouter()
@@ -29,5 +30,8 @@ urlpatterns = [
     url(r'^$', include('albums.urls')),
     url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
+    url(r'^api-auth/', include('rest_framework.urls')),
+    url(r'^random/text/', name='api_random_text', view=random_text),
+    url(r'^service/soap/', name='api_service_soap', view=service_soap),
     url(r'^api-auth/', include('rest_framework.urls'))
 ]
