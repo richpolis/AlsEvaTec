@@ -3639,3 +3639,199 @@ Not Found: /img/undraw_posting_photo.svg
 "GET /api/albums/ HTTP/1.1" 400 10303
 "GET /api/albums/ HTTP/1.1" 200 13376
 "GET /api/artists/ HTTP/1.1" 200 13457
+"GET / HTTP/1.1" 200 30610
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+Not Found: /img/undraw_posting_photo.svg
+"GET /img/undraw_posting_photo.svg HTTP/1.1" 404 2580
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+Internal Server Error: /random/text/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 20, in random_text
+    if not RandomText.objects.filter(number=data['value']['id']).exists():
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/db/models/query.py", line 673, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/db/models/sql/query.py", line 517, in has_results
+    return compiler.has_results()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 858, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 899, in execute_sql
+    raise original_exception
+OperationalError: no such table: services_randomtext
+"GET /random/text/ HTTP/1.1" 500 87482
+"GET /random/text/ HTTP/1.1" 200 17805
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/ HTTP/1.1" 200 17864
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/ HTTP/1.1" 200 17922
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/ HTTP/1.1" 200 17802
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/ HTTP/1.1" 200 17802
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/?format=json HTTP/1.1" 200 121
+"GET /random/text/ HTTP/1.1" 200 17806
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+"GET /random/text/ HTTP/1.1" 200 17882
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 78635
+"GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 54456
+"GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 158741
+"GET /static/js/sb-admin-2.min.js HTTP/1.1" 200 1106
+"GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 200 1057
+"GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 3569
+"GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 196793
+"GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 2532
+"GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 86927
+"GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 74348
+"GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 311949
+Internal Server Error: /service/soap/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 44, in service_soap
+    data = response.json()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/requests/models.py", line 897, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py", line 384, in raw_decode
+    raise ValueError("No JSON object could be decoded")
+ValueError: No JSON object could be decoded
+"GET /service/soap/ HTTP/1.1" 500 101361
+Internal Server Error: /service/soap/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 47, in service_soap
+    return JsonResponse(response)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/http/response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+"GET /service/soap/ HTTP/1.1" 500 73566
+"GET /service/soap/ HTTP/1.1" 200 37172
+Internal Server Error: /service/soap/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 47, in service_soap
+    data = json.dumps(xmltodict.parse(response))
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/xmltodict.py", line 327, in parse
+    parser.Parse(xml_input, True)
+TypeError: must be string or read-only buffer, not Response
+"GET /service/soap/ HTTP/1.1" 500 74318
+Internal Server Error: /service/soap/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 48, in service_soap
+    return JsonResponse(data)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/http/response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+"GET /service/soap/ HTTP/1.1" 500 87645
+Internal Server Error: /service/soap/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/services/views.py", line 49, in service_soap
+    return JsonResponse(data)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/http/response.py", line 524, in __init__
+    'In order to allow non-dict objects to be serialized set the '
+TypeError: In order to allow non-dict objects to be serialized set the safe parameter to False.
+"GET /service/soap/ HTTP/1.1" 500 87574
