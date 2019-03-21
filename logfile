@@ -1,0 +1,451 @@
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2282
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+Not Found: /
+"GET / HTTP/1.1" 404 2231
+"GET / HTTP/1.1" 200 30703
+Not Found: /vendor/fontawesome-free/css/all.min.css
+"GET /vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 2366
+Not Found: /css/sb-admin-2.min.css
+Not Found: /vendor/jquery/jquery.min.js
+Not Found: /js/sb-admin-2.min.js
+Not Found: /vendor/jquery-easing/jquery.easing.min.js
+Not Found: /vendor/bootstrap/js/bootstrap.bundle.min.js
+"GET /css/sb-admin-2.min.css HTTP/1.1" 404 2315
+"GET /js/sb-admin-2.min.js HTTP/1.1" 404 2309
+"GET /vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 2378
+"GET /vendor/jquery/jquery.min.js HTTP/1.1" 404 2330
+"GET /vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 2372
+Not Found: /js/demo/chart-area-demo.js
+Not Found: /vendor/chart.js/Chart.min.js
+"GET /vendor/chart.js/Chart.min.js HTTP/1.1" 404 2333
+Not Found: /js/demo/chart-pie-demo.js
+"GET /js/demo/chart-area-demo.js HTTP/1.1" 404 2327
+Not Found: /img/undraw_posting_photo.svg
+"GET /js/demo/chart-pie-demo.js HTTP/1.1" 404 2324
+"GET /img/undraw_posting_photo.svg HTTP/1.1" 404 2333
+Not Found: /vendor/jquery-easing/jquery.easing.min.js
+"GET /vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 2372
+Not Found: /js/sb-admin-2.min.js
+"GET /js/sb-admin-2.min.js HTTP/1.1" 404 2309
+Not Found: /vendor/chart.js/Chart.min.js
+"GET /vendor/chart.js/Chart.min.js HTTP/1.1" 404 2333
+Not Found: /js/demo/chart-area-demo.js
+"GET /js/demo/chart-area-demo.js HTTP/1.1" 404 2327
+Not Found: /js/demo/chart-pie-demo.js
+"GET /js/demo/chart-pie-demo.js HTTP/1.1" 404 2324
+"GET /api HTTP/1.1" 301 0
+"GET /api/ HTTP/1.1" 200 5358
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"GET /api/users/ HTTP/1.1" 200 9399
+"POST /api/users/ HTTP/1.1" 201 9892
+"GET /api/users/1/ HTTP/1.1" 200 11134
+"GET /api-auth/login/?next=/api/users/1/ HTTP/1.1" 200 2727
+"POST /api-auth/login/ HTTP/1.1" 200 3058
+"GET /api-auth/login/?next=/api/users/1/ HTTP/1.1" 200 2727
+"GET /api/users/1/ HTTP/1.1" 200 11460
+"PUT /api/users/1/ HTTP/1.1" 200 11484
+"GET /api-auth/login/?next=/api/users/1/ HTTP/1.1" 200 2727
+"POST /api-auth/login/ HTTP/1.1" 200 3058
+"GET /api-auth/login/?next=/api/users/1/ HTTP/1.1" 200 2727
+"GET /api/users/1/ HTTP/1.1" 200 11484
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5358
+"GET /api/ HTTP/1.1" 200 5492
+Internal Server Error: /api/albums/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 483, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 401, in initial
+    self.check_permissions(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 333, in check_permissions
+    for permission in self.get_permissions():
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 280, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+"GET /api/albums/ HTTP/1.1" 500 99817
+Internal Server Error: /api/albums/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 483, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 401, in initial
+    self.check_permissions(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 333, in check_permissions
+    for permission in self.get_permissions():
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 280, in get_permissions
+    return [permission() for permission in self.permission_classes]
+TypeError: 'BasePermissionMetaclass' object is not iterable
+"GET /api/albums/ HTTP/1.1" 500 99952
+"GET /api/albums/ HTTP/1.1" 200 8843
+"POST /api/albums/ HTTP/1.1" 201 9140
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"POST /api/albums/ HTTP/1.1" 201 9140
+"GET /api/albums/ HTTP/1.1" 200 9469
+Internal Server Error: /api/albums/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 47, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 130, in __new__
+    return cls.many_init(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 150, in many_init
+    list_kwargs = {'child_relation': cls(*args, **kwargs)}
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 435, in __init__
+    super(HyperlinkedIdentityField, self).__init__(view_name, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 300, in __init__
+    super(HyperlinkedRelatedField, self).__init__(**kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 124, in __init__
+    super(RelatedField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+"GET /api/albums/ HTTP/1.1" 500 119389
+Internal Server Error: /api/albums/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 47, in list
+    serializer = self.get_serializer(queryset, many=True)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/generics.py", line 112, in get_serializer
+    return serializer_class(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 130, in __new__
+    return cls.many_init(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 150, in many_init
+    list_kwargs = {'child_relation': cls(*args, **kwargs)}
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 435, in __init__
+    super(HyperlinkedIdentityField, self).__init__(view_name, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 300, in __init__
+    super(HyperlinkedRelatedField, self).__init__(**kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/relations.py", line 124, in __init__
+    super(RelatedField, self).__init__(**kwargs)
+TypeError: __init__() got an unexpected keyword argument 'context'
+"GET /api/albums/ HTTP/1.1" 500 119389
+"GET /api/albums/ HTTP/1.1" 200 9469
+"GET /api/albums/1 HTTP/1.1" 301 0
+"GET /api/albums/1/ HTTP/1.1" 200 10643
+"PUT /api/albums/1/ HTTP/1.1" 200 10703
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/ HTTP/1.1" 200 9493
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+Internal Server Error: /api/albums/1/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 69, in update
+    serializer.is_valid(raise_exception=True)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/albums/serializers.py", line 19, in validate
+    attrs['created_at'] = timezone.localtime(attrs['created_at'], TIME_ZONE)
+KeyError: 'created_at'
+"PUT /api/albums/1/ HTTP/1.1" 500 108089
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+Internal Server Error: /api/albums/1/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/viewsets.py", line 116, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 84, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/albums/serializers.py", line 36, in update
+    name = validated_data['name']
+KeyError: 'name'
+"PATCH /api/albums/1/ HTTP/1.1" 500 112554
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"PATCH /api/albums/1/ HTTP/1.1" 400 10286
+"GET /api/albums/1/ HTTP/1.1" 200 10703
+"GET /api/albums/1/ HTTP/1.1" 200 11261
+"GET /api/ HTTP/1.1" 200 5629
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Internal Server Error: /api/albums/
+Traceback (most recent call last):
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/django/template/response.py", line 107, in render
+    self.content = self.rendered_content
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 733, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 663, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/renderers.py", line 574, in get_raw_data_form
+    data = serializer.data.copy()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 563, in data
+    ret = super(Serializer, self).data
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 266, in data
+    self._data = self.get_initial()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 413, in get_initial
+    for field in self.fields.values()
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 1025, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/Users/richpolis/Proyectos/python/AlsEvaTec/.venv/lib/python2.7/site-packages/rest_framework/serializers.py", line 1126, in get_field_names
+    serializer_class=self.__class__.__name__
+AssertionError: The field 'artist_id' was declared on serializer AlbumSerializer, but has not been included in the 'fields' option.
+"GET /api/albums/ HTTP/1.1" 500 122005
+"GET /api/albums/ HTTP/1.1" 200 10651
+"GET /api/ HTTP/1.1" 200 5629
+"GET /api/artists/ HTTP/1.1" 200 9559
+"POST /api/artists/ HTTP/1.1" 400 9634
+"POST /api/artists/ HTTP/1.1" 400 9634
+"POST /api/artists/ HTTP/1.1" 400 9634
+"POST /api/artists/ HTTP/1.1" 400 9634
+"GET /api/ HTTP/1.1" 200 5629
+"GET /api/albums/ HTTP/1.1" 200 10651
+"GET /api/albums/ HTTP/1.1" 200 10651
+"GET /api/artists/ HTTP/1.1" 200 9559
+"POST /api/artists/ HTTP/1.1" 400 9644
+"POST /api/artists/ HTTP/1.1" 400 9644
+"GET /api/artists/ HTTP/1.1" 200 9513
+"POST /api/artists/ HTTP/1.1" 400 9598
+"GET /api/artists/ HTTP/1.1" 200 9513
+"POST /api/artists/ HTTP/1.1" 400 9519
+"POST /api/artists/ HTTP/1.1" 400 9598
+"GET /api/artists/ HTTP/1.1" 400 9560
+"GET /api/artists/ HTTP/1.1" 200 9516
+"POST /api/artists/ HTTP/1.1" 400 9602
+"GET /api/artists/ HTTP/1.1" 200 10348
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+"GET /api/ HTTP/1.1" 200 5629
+"GET /api/albums/ HTTP/1.1" 200 10806
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"PUT /api/albums/1/ HTTP/1.1" 400 11388
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"PUT /api/albums/1/ HTTP/1.1" 400 11388
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"PUT /api/albums/1/ HTTP/1.1" 400 11369
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"PUT /api/albums/1/ HTTP/1.1" 400 11369
+"GET /api/albums/1/ HTTP/1.1" 200 11673
+"PUT /api/albums/1/ HTTP/1.1" 400 11394
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+"GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+"GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2282
+Not Found: /vendor/fontawesome-free/css/all.min.css
+Not Found: /css/sb-admin-2.min.css
+"GET /vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 2366
+"GET /css/sb-admin-2.min.css HTTP/1.1" 404 2315
+Not Found: /vendor/jquery/jquery.min.js
+"GET /vendor/jquery/jquery.min.js HTTP/1.1" 404 2330
+Not Found: /vendor/bootstrap/js/bootstrap.bundle.min.js
+"GET /vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 2378
+Not Found: /vendor/jquery-easing/jquery.easing.min.js
+"GET /vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 2372
+Not Found: /js/sb-admin-2.min.js
+"GET /js/sb-admin-2.min.js HTTP/1.1" 404 2309
+Not Found: /vendor/chart.js/Chart.min.js
+Not Found: /js/demo/chart-area-demo.js
+"GET /js/demo/chart-area-demo.js HTTP/1.1" 404 2327
+"GET /vendor/chart.js/Chart.min.js HTTP/1.1" 404 2333
+Not Found: /js/demo/chart-pie-demo.js
+"GET /js/demo/chart-pie-demo.js HTTP/1.1" 404 2324
+Not Found: /js/demo/chart-area-demo.js
+"GET /js/demo/chart-area-demo.js HTTP/1.1" 404 2327
+Not Found: /js/demo/chart-pie-demo.js
+"GET /js/demo/chart-pie-demo.js HTTP/1.1" 404 2324
+Not Found: /img/undraw_posting_photo.svg
+"GET /img/undraw_posting_photo.svg HTTP/1.1" 404 2333
