@@ -105,7 +105,7 @@ class ArtistGroupViewSet(viewsets.ModelViewSet):
             if artist:
                 filters['name__icontains'] = artist
             if album:
-                filters['album_set__name__icontains'] = album
+                filters['albums__name__icontains'] = album
             return ArtistGroup.objects.filter(**filters)
         else:
             return ArtistGroup.objects.all().order_by('-id')

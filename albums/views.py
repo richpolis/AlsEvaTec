@@ -16,3 +16,14 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data(**kwargs)
         return context
+
+
+class RandomView(TemplateView):
+    """
+       Display endpoints enabled in the app.
+       """
+    template_name = 'albums/random.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        return context

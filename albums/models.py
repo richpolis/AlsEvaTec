@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from django.utils import timezone
 
 class NSDA(models.Model):
     name = models.CharField(max_length=100, verbose_name="Nombre")
@@ -18,13 +19,13 @@ class NSDA(models.Model):
 
 
 class Album(NSDA):
-    created_at = models.DateTimeField(blank=True, null=True)
-    updated_at = models.DateTimeField(blank=True, null=True)
-    artist = models.ForeignKey('ArtistGroup', blank=True, null=True)
+    artist = models.ForeignKey('ArtistGroup', blank=True, null=True, related_name='albums')
+    ntracks = models.IntegerField(default=1)
+    year = models.IntegerField(default=timezone.now().year)
 
 class ArtistGroupType(NSDA): pass
 
 
 class ArtistGroup(NSDA):
-    otype = models.ForeignKey(ArtistGroupType, null=True, blank=True)
+    type = models.ForeignKey(ArtistGroupType, null=True, blank=True)
 

@@ -9,22 +9,30 @@ from albums.models import Album, ArtistGroup, ArtistGroupType
 from albums.utils import slug_generator, validate_timezone_date
 
 
+class ArtistGroupTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArtistGroupType
+        fields = ('id', 'name', 'slug')
+
 class ArtistGroupSerializer(serializers.ModelSerializer):
     albums = serializers.SerializerMethodField()
-    otype_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroupType.objects.filter(active=True),
-                                                   source='otype', required=True)
+    type = ArtistGroupTypeSerializer(read_only=True)
+    type_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroupType.objects.filter(active=True),
+                                                   source='type', required=True)
 
     class Meta:
         model = ArtistGroup
-        fields = ('id', 'name', 'otype', 'otype_id', 'albums', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'type', 'type_id', 'albums', 'slug', 'created_at', 'updated_at', 'active')
         extra_kwargs = {
             'slug': {'read_only': True},
             'albums': {'read_only': True},
-            'otype': {'read_only': True}
+            'otype': {'read_only': True},
+            'created_at': {'read_only': True},
+            'updated_at': {'read_only': True}
         }
 
     def get_albums(self, instance):
-        albums = Album.objects.filter(artist=instance)
+        albums = instance.albums.all()
         serializer = AlbumWithoutArtistSerializer(albums, many=True, context=self.context)
 
         return serializer.data
@@ -43,9 +51,6 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
         model = Album
         name = validated_data['name']
         validated_data['slug'] = slug_generator(name, model)
-        #validated_data = validate_timezone_date(validated_data, 'created_at')
-        #validated_data = validate_timezone_date(validated_data, 'updated_at')
-
         obj = ArtistGroup.objects.create(name=name, slug=validated_data['slug'])
         obj.created_at = timezone.now()
         obj.updated_at = timezone.now()
@@ -60,8 +65,8 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
             model = Album
             name = validated_data['name']
             validated_data['slug'] = slug_generator(name, model)
-        #validated_data = validate_timezone_date(validated_data, 'created_at', False)
-        #validated_data = validate_timezone_date(validated_data, 'created_at', False)
+        if not 'updated_at' in validated_data:
+            validated_data['updated_at'] = timezone.now()
         for attr, value in validated_data.items():
             if attr in info.relations and info.relations[attr].to_many:
                 field = getattr(instance, attr)
@@ -86,9 +91,11 @@ class AlbumSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Album
-        fields = ('id', 'name', 'artist', 'artist_id', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'artist', 'artist_id', 'ntracks', 'year', 'slug', 'created_at', 'updated_at', 'active')
         extra_kwargs = {
             'slug': {'read_only': True},
+            'created_at': {'read_only': True},
+            'updated_at': {'read_only': True}
         }
 
     # def validate(self, attrs):
@@ -105,9 +112,6 @@ class AlbumSerializer(serializers.ModelSerializer):
         model = Album
         name = validated_data['name']
         validated_data['slug'] = slug_generator(name, model)
-        #validated_data = validate_timezone_date(validated_data, 'created_at')
-        #validated_data = validate_timezone_date(validated_data, 'updated_at')
-
         obj = model.objects.create(**validated_data)
         return obj
 
@@ -118,8 +122,8 @@ class AlbumSerializer(serializers.ModelSerializer):
             model = Album
             name = validated_data['name']
             validated_data['slug'] = slug_generator(name, model)
-        #validated_data = validate_timezone_date(validated_data, 'created_at', False)
-        #validated_data = validate_timezone_date(validated_data, 'created_at', False)
+        if not 'updated_at' in validated_data:
+            validated_data['updated_at'] = timezone.now()
         for attr, value in validated_data.items():
             if attr in info.relations and info.relations[attr].to_many:
                 field = getattr(instance, attr)
@@ -134,4 +138,4 @@ class AlbumWithoutArtistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Album
-        fields = ('id', 'name', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'slug', 'ntracks', 'year', 'created_at', 'updated_at', 'active')
