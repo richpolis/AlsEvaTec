@@ -3636,3 +3636,6 @@ Not Found: /img/undraw_posting_photo.svg
 "GET /api/ HTTP/1.1" 200 5629
 "GET /api/users/ HTTP/1.1" 200 10076
 "GET /api/ HTTP/1.1" 200 5629
+"GET /api/albums/ HTTP/1.1" 400 10303
+"GET /api/albums/ HTTP/1.1" 200 13376
+"GET /api/artists/ HTTP/1.1" 200 13457

@@ -82,7 +82,7 @@ class ArtistGroupWithoutAlbumsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ArtistGroup
-        fields = ('id', 'name', 'otype', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'type', 'slug', 'created_at', 'updated_at', 'active')
 
 
 class AlbumSerializer(serializers.ModelSerializer):
