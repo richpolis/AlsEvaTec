@@ -11,13 +11,16 @@ from albums.utils import slug_generator, validate_timezone_date
 
 class ArtistGroupSerializer(serializers.ModelSerializer):
     albums = serializers.SerializerMethodField()
+    otype_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroupType.objects.filter(active=True),
+                                                   source='otype', required=True)
 
     class Meta:
         model = ArtistGroup
-        fields = ('id', 'name', 'otype', 'albums', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'otype', 'otype_id', 'albums', 'slug', 'created_at', 'updated_at', 'active')
         extra_kwargs = {
             'slug': {'read_only': True},
-            'albums': {'read_only': True}
+            'albums': {'read_only': True},
+            'otype': {'read_only': True}
         }
 
     def get_albums(self, instance):
@@ -79,11 +82,11 @@ class ArtistGroupWithoutAlbumsSerializer(serializers.ModelSerializer):
 
 class AlbumSerializer(serializers.ModelSerializer):
     artist = ArtistGroupWithoutAlbumsSerializer(read_only=True)
-    #artist_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroup.objects.filter(active=True), source='artist',required=True)
+    artist_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroup.objects.filter(active=True), source='artist',required=True)
 
     class Meta:
         model = Album
-        fields = ('id', 'name', 'artist', 'slug', 'created_at', 'updated_at', 'active')
+        fields = ('id', 'name', 'artist', 'artist_id', 'slug', 'created_at', 'updated_at', 'active')
         extra_kwargs = {
             'slug': {'read_only': True},
         }

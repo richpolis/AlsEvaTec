@@ -11,6 +11,20 @@ class AlbumViewSet(viewsets.ModelViewSet):
     serializer_class = AlbumSerializer
     permission_classes = (AllowAny,)
 
+    def get_queryset(self):
+        album = self.request.query_params.get('album', None)
+        artist = self.request.query_params.get('artist', None)
+        if album or artist:
+            filters = dict()
+            if artist:
+                filters['artist__name__icontains'] = artist
+            if album:
+                filters['name__icontains'] = album
+            return Album.objects.filter(**filters)
+        else:
+            return Album.objects.all().order_by('-id')
+
+
     def get_model(self):
         return Album
 
@@ -82,6 +96,19 @@ class ArtistGroupViewSet(viewsets.ModelViewSet):
 
     def get_model(self):
         return ArtistGroup
+
+    def get_queryset(self):
+        album = self.request.query_params.get('album', None)
+        artist = self.request.query_params.get('artist', None)
+        if album or artist:
+            filters = dict()
+            if artist:
+                filters['name__icontains'] = artist
+            if album:
+                filters['album_set__name__icontains'] = album
+            return ArtistGroup.objects.filter(**filters)
+        else:
+            return ArtistGroup.objects.all().order_by('-id')
 
     def return_response(self, data={}, message='', extra='Ningun problema', status=200):
         data = {

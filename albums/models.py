@@ -20,7 +20,7 @@ class NSDA(models.Model):
 class Album(NSDA):
     created_at = models.DateTimeField(blank=True, null=True)
     updated_at = models.DateTimeField(blank=True, null=True)
-    artist = models.ForeignKey('ArtistGroup', blank=True, null=True, related_name='artists')
+    artist = models.ForeignKey('ArtistGroup', blank=True, null=True)
 
 class ArtistGroupType(NSDA): pass
 
