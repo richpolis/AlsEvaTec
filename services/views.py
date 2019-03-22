@@ -47,9 +47,14 @@ def random_text(request):
 
 
 def service_soap(request):
+    headers = {'content-type': 'application/json'}
     response = requests.get('http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL')
     if response.status_code == 200:
         data = json.loads(json.dumps(xmltodict.parse(response.content)))
+        response = requests.get('http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso/FullCountryInfoAllCountries')
+        if response.status_code == 200:
+            extra = json.loads(json.dumps(xmltodict.parse(response.content)))
+            data['extra'] = extra
         return JsonResponse(data)
     else:
         return JsonResponse({'error': 'Error en el servicio SOAP'})
