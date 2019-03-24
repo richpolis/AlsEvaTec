@@ -9,6 +9,14 @@ from albums.models import Album, ArtistGroup, ArtistGroupType
 from albums.utils import slug_generator, validate_timezone_date
 
 
+class DateTimeFieldWihTZ(serializers.DateTimeField):
+    '''Class to make output of a DateTime Field timezone aware
+    '''
+    def to_representation(self, value):
+        from_zone = pytz.timezone(TIME_ZONE)
+        value = value.astimezone(from_zone)
+        return super(DateTimeFieldWihTZ, self).to_representation(value)
+
 class ArtistGroupTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ArtistGroupType
@@ -19,6 +27,8 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
     type = ArtistGroupTypeSerializer(read_only=True)
     type_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroupType.objects.filter(active=True),
                                                    source='type', required=True)
+    created_at = DateTimeFieldWihTZ()
+    updated_at = DateTimeFieldWihTZ()
 
     class Meta:
         model = ArtistGroup
@@ -26,9 +36,7 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'slug': {'read_only': True},
             'albums': {'read_only': True},
-            'otype': {'read_only': True},
-            'created_at': {'read_only': True},
-            'updated_at': {'read_only': True}
+            'type': {'read_only': True}
         }
 
     def get_albums(self, instance):
@@ -37,25 +45,21 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
 
         return serializer.data
 
-    # def validate(self, attrs):
-    #     user_time_zone = pytz.timezone(TIME_ZONE)
-    #     if 'created_at' in attrs:
-    #         created_at = datetime.datetime.strptime(attrs['created_at'], "%m/%d/%Y %H:%M:%S")
-    #         attrs['created_at'] = str(user_time_zone.localize(created_at))
-    #     if 'updated_at' in attrs:
-    #         created_at = datetime.datetime.strptime(attrs['updated_at'], "%m/%d/%Y %H:%M:%S")
-    #         attrs['updated_at'] = str(timezone.localtime(created_at))
-    #     return attrs
-
     def create(self, validated_data):
         model = Album
         name = validated_data['name']
         validated_data['slug'] = slug_generator(name, model)
-        obj = ArtistGroup.objects.create(name=name, slug=validated_data['slug'])
-        obj.created_at = timezone.now()
-        obj.updated_at = timezone.now()
-        obj.otype = validated_data['otype']
-        obj.save()
+        from_zone = pytz.timezone(TIME_ZONE)
+        if not 'created_at' in validated_data:
+            validated_data['created_at'] = timezone.now()
+        else:
+            validated_data['created_at'] = validated_data['created_at'].astimezone(from_zone)
+        if not 'updated_at' in validated_data:
+            validated_data['updated_at'] = timezone.now()
+        else:
+            validated_data['updated_at'] = validated_data['updated_at'].astimezone(from_zone)
+
+        obj = ArtistGroup.objects.create(**validated_data)
         return obj
 
     def update(self, instance, validated_data):
@@ -65,8 +69,15 @@ class ArtistGroupSerializer(serializers.ModelSerializer):
             model = Album
             name = validated_data['name']
             validated_data['slug'] = slug_generator(name, model)
+        from_zone = pytz.timezone(TIME_ZONE)
+        if not 'created_at' in validated_data:
+            validated_data['created_at'] = instance.created_at
+        else:
+            validated_data['created_at'] = validated_data['created_at'].astimezone(from_zone)
         if not 'updated_at' in validated_data:
             validated_data['updated_at'] = timezone.now()
+        else:
+            validated_data['updated_at'] = validated_data['updated_at'].astimezone(from_zone)
         for attr, value in validated_data.items():
             if attr in info.relations and info.relations[attr].to_many:
                 field = getattr(instance, attr)
@@ -89,29 +100,28 @@ class AlbumSerializer(serializers.ModelSerializer):
     artist = ArtistGroupWithoutAlbumsSerializer(read_only=True)
     artist_id = serializers.PrimaryKeyRelatedField(write_only=True, queryset=ArtistGroup.objects.filter(active=True), source='artist',required=True)
 
+    created_at = DateTimeFieldWihTZ()
+    updated_at = DateTimeFieldWihTZ()
+
     class Meta:
         model = Album
         fields = ('id', 'name', 'artist', 'artist_id', 'ntracks', 'year', 'slug', 'created_at', 'updated_at', 'active')
         extra_kwargs = {
-            'slug': {'read_only': True},
-            'created_at': {'read_only': True},
-            'updated_at': {'read_only': True}
+            'slug': {'read_only': True}
         }
-
-    # def validate(self, attrs):
-    #     uuser_time_zone = pytz.timezone(TIME_ZONE)
-    #     if 'created_at' in attrs:
-    #         created_at = datetime.datetime.strptime(attrs['created_at'], "%m/%d/%Y %H:%M:%S")
-    #         attrs['created_at'] = str(user_time_zone.localize(created_at))
-    #     if 'updated_at' in attrs:
-    #         created_at = datetime.datetime.strptime(attrs['updated_at'], "%m/%d/%Y %H:%M:%S")
-    #         attrs['updated_at'] = str(timezone.localtime(created_at))
-    #     return attrs
 
     def create(self, validated_data):
         model = Album
         name = validated_data['name']
         validated_data['slug'] = slug_generator(name, model)
+        if not 'created_at' in validated_data:
+            validated_data['created_at'] = timezone.now()
+        else:
+            validated_data['created_at'] = timezone.localtime(validated_data['created_at'], timezone=TIME_ZONE)
+        if not 'updated_at' in validated_data:
+            validated_data['updated_at'] = timezone.now()
+        else:
+            validated_data['updated_at'] = timezone.localtime(validated_data['updated_at'], timezone=TIME_ZONE)
         obj = model.objects.create(**validated_data)
         return obj
 
@@ -122,8 +132,15 @@ class AlbumSerializer(serializers.ModelSerializer):
             model = Album
             name = validated_data['name']
             validated_data['slug'] = slug_generator(name, model)
+        if not 'created_at' in validated_data:
+            validated_data['created_at'] = instance.created_at
+        else:
+            validated_data['created_at'] = timezone.localtime(validated_data['created_at'], timezone=TIME_ZONE)
         if not 'updated_at' in validated_data:
             validated_data['updated_at'] = timezone.now()
+        else:
+            validated_data['updated_at'] = timezone.localtime(validated_data['updated_at'], timezone=TIME_ZONE)
+
         for attr, value in validated_data.items():
             if attr in info.relations and info.relations[attr].to_many:
                 field = getattr(instance, attr)
