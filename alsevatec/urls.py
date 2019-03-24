@@ -22,7 +22,7 @@ from services.views import random_text, service_soap
 from .viewsets import UserViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', UserViewSet)
+# router.register(r'users', UserViewSet)
 router.register(r'albums', AlbumViewSet)
 router.register(r'artists', ArtistGroupViewSet)
 
